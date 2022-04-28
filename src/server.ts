@@ -4,7 +4,6 @@ const prisma = new PrismaClient();
 
 function create() {
   // usabildade para adição de values na nossas tabelas 
-
   prisma.courses.create({
     data: {
       duration: 100,
@@ -12,9 +11,8 @@ function create() {
       description: "Melhor Curso de Python"
     }
   }).then((data) => console.log(data));
-
-
 }
 
 
-create()
+
+
