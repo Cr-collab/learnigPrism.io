@@ -1,0 +1,19 @@
+version: '3.9'
+
+services:
+  database:
+    container_name: database_prisma
+    image: postgres
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: docker
+      POSTGRES_PASSWORD: ignite
+      POSTGRES_DB: prisma
+    volumes:
+      - ./pgdata:/data/postgres
+
+volumes:
+  pgdata:
+    driver: local
